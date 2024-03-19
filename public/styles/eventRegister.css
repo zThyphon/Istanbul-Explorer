@@ -1,0 +1,182 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container
+{
+    width: 100vw;
+    min-height: 100vh;
+    max-height: auto;
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url("../images/eventRegisterBackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+    overflow-y:scroll;
+    overflow-x: hidden;
+}
+
+.formDiv
+{
+    width: 50%;
+    height: 90%;
+    background: rgba(0, 0, 0, 0.5);
+    border: 3px solid yellowgreen;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:center;
+    margin: 2rem;
+}
+
+form
+{
+    width: 100%;
+    height: 100%;
+}
+
+.pageHeader
+{
+    font-size: 2rem;
+    color: gold;
+}
+
+
+.areaLabel
+{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    margin: 1rem;
+}
+
+.inputArea
+{
+    display: block;
+    width: 30%;
+    margin: 0 auto;
+    height: 1.3rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid white;
+    padding: 0.5rem;
+    color: white;
+    font-size:1.1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.inputArea:focus
+{
+    outline: none;
+}
+
+.formAddressArea
+{
+    display: block;
+    width: 30%;
+    padding: 0.5rem;
+    color: white;
+    font-size: 1.1rem;
+    background: transparent;
+    margin: 0 auto;
+    text-decoration: none;
+    border: none;
+    border: 3px solid white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.formAddressArea:focus
+{
+    outline: none;
+}
+
+.ourInfo
+{   
+    width: 40%;
+    height: 30px;
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    margin: 0.4rem auto;
+}
+
+.ourInfoHeader
+{
+    color: gold;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.ourInfoDescription
+{
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
+.contactButton
+{
+    display: block;
+    margin: 0 auto;
+    background-color: #0275d8;
+    padding: 1rem;
+    color: white;
+    border: 2px solid white;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size:1.1rem;
+    margin-bottom: 1rem;
+    margin-top:1rem;
+}
+
+.contactButton:hover
+{
+    background: chocolate;
+    transition: 0.6s ease-in-out;
+    cursor: pointer;
+}
+
+.addressArea
+{
+    padding: 0.3rem;
+    font-size: 1rem;
+}
+
+
+@media(max-width: 1000px)
+{
+    .inputArea
+    {
+        width: 60%;
+    }
+
+    .formAddressArea
+    {
+        width: 60%;
+    }
+}
+
+@media(max-width: 1000px)
+{
+    .formDiv    
+    {
+        width: 90%;
+    }
+
+    .ourInfo
+    {
+        width: 80%;
+    }
+}

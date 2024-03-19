@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/icons/IstanbulExplorerIcon.jpg">
+    <link rel="stylesheet" href="/styles/eventRegister.css">
+    <title>Istanbul Explorer</title>
+</head>
+<body>
+    <div class="container">
+        <div class="formDiv">
+            <h3 class="pageHeader">Register to Event</h3>
+            <form id="registerForm" method="POST" action="/events/Register">
+                <label class="areaLabel">Event Name</label>
+                <input 
+                    type="text"
+                    id="eventNameInput" 
+                    name="eventNameInput"
+                    class="inputArea" 
+                    value="<%= eventDetails.eventHeader %>"
+                    readonly="true">
+
+                <label class="areaLabel">Event Date & Time</label>
+                <input 
+                    type="text"
+                    id="eventDateTime" 
+                    name="eventDateTime"
+                    class="inputArea" 
+                    value="<%= eventDetails.eventDateTime %>"
+                    readonly="true">
+                
+                <label class="areaLabel">Event Location</label>
+                <input 
+                    type="text"
+                    id="eventLocation" 
+                    name="eventLocation"
+                    class="inputArea" 
+                    value="<%= eventDetails.eventLocation %>"
+                    readonly="true">
+
+                <label class="areaLabel">Participant First Name & Last Name</label>
+                <input 
+                    type="text"
+                    id="participantNameInput" 
+                    name="participantNameInput"
+                    class="inputArea" 
+                    placeholder="Enter First Name & Last Name">
+                
+                <label class="areaLabel">Participant Email</label>
+                <input 
+                    type="email" 
+                    class="inputArea" 
+                    id="participantEmailInput"
+                    name="participantEmailInput"
+                    placeholder="Enter Email">
+                
+                <label class="areaLabel">Participant Phone</label>
+                <input 
+                    type="text" 
+                    id="participantPhoneInput"
+                    name="participantPhoneInput"
+                    class="inputArea" 
+                    placeholder="Enter Phone">
+
+                <label class="areaLabel">Participant Address</label>
+                <textarea 
+                    id="participantAddressInput"
+                    class="formAddressArea" 
+                    name="participantAddressInput"
+                    placeholder="Enter address" 
+                    cols="30" 
+                    rows="10"></textarea>
+                
+                <input 
+                    type="hidden" 
+                    name="eventId"
+                    class="inputArea" 
+                    value="<%= eventDetails.eventID %>"
+                    placeholder="Enter Phone">
+
+                <button type="submit" class="contactButton">Register</button>
+            </form>
+        </div>
+    </div>
+    <script src="/scripts/eventRegister.js"></script>
+</body>
+</html>

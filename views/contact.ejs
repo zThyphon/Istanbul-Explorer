@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/icons/IstanbulExplorerIcon.jpg">
+    <link rel="stylesheet" href="/styles/contactPage.css">
+    <title>Istanbul Explorer</title>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <a href="/">Home Page</a>
+            <a href="events">Events</a>
+            <a href="gallery">Gallery</a>
+            <a class="active">Contact</a>
+        </nav>
+        <div class="formDiv">
+            <h3 class="pageHeader">CONTACT US</h3>
+            <form id="contactForm" method="POST" action="/contact">
+                <label class="areaLabel">Social Media Accounts</label>
+                <div class="socialMediaRow">
+                    <a href="mailto:mustafacil198@gmail.com" target="_blank" title="mail"><img src="/icons/mailIcon.png" class="socialMediaLink"></a>
+                    <a href="https://github.com/zThyphon" target="_blank" title="github"><img src="/icons/githubIcon.png" class="socialMediaLink"></a>
+                    <a href="https://www.linkedin.com/in/mustafa-doruk-%C3%A7il-602a33217/" target="_blank" title="linkedin"><img src="/icons/linkedinIcon.png" class="socialMediaLink"></a>
+                </div>
+                <label class="areaLabel">Full Name</label>
+                <input 
+                    type="text"
+                    id="fullNameInput" 
+                    name="fullNameInput"
+                    class="inputArea" 
+                    placeholder="Enter First Name & Last Name">
+            
+                <label class="areaLabel">Email</label>
+                <input 
+                    type="email" 
+                    class="inputArea" 
+                    id="emailInput"
+                    name="emailInput"
+                    placeholder="Enter Email">
+                
+                <label class="areaLabel">Phone</label>
+                <input 
+                    type="text" 
+                    id="phoneInput"
+                    name="phoneInput"
+                    class="inputArea" 
+                    placeholder="Enter Phone">
+
+                <label class="areaLabel">Address</label>
+                <textarea 
+                    id="addressInput"
+                    class="formAddressArea" 
+                    name="addressInput"
+                    placeholder="Enter address" 
+                    cols="30" 
+                    rows="10"></textarea>
+                <button class="contactButton">Contact</button>
+            </form>
+        </div>
+
+        <footer class="footer">
+            <div class="ourInfo">
+                <p class="ourInfoHeader">Contact Number</p>
+                <label class="ourInfoDescription">+90 0537 388 83 15</label>
+            </div>
+            <div class="ourInfo">
+                <p class="ourInfoHeader">Contact Address</p>
+                <label class="ourInfoDescription">Example town, example district, NO:5 Istanbul</label>
+            </div>
+            <p class="footerInfo">This website Developed by <span class="developerInfo">Mustafa Doruk ÇİL</span></p>
+           
+            <p class="footerInfo">© 2024</p>
+        </footer>
+    </div>
+    <script src="/scripts/formValidation.js"></script>
+</body>
+</html>

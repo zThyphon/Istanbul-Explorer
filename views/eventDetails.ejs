@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/icons/IstanbulExplorerIcon.jpg">
+    <link rel="stylesheet" href="/styles/eventDetails.css">
+    <title>Istanbul Explorer</title>
+</head>
+<body>
+    <div class="container"> 
+        <h3 class="pageHeader"><%= eventDetails.eventHeader %></h3>
+        <div class="eventImageDiv">
+            <img src="/images/<%= eventDetails.eventImage%>" alt="<%= eventDetails.eventImage%>">
+        </div>  
+        <p class="eventDateTime"><%= eventDetails.eventDateTime %></p>
+        <p class="eventLocation"><%= eventDetails.eventLocation %></p>
+        <p class="eventDescription"><%= eventDetails.eventDescription %></p>
+        
+        <form action="/events/register/<%= eventDetails.eventID %>">
+            <button type="submit" class="registerButton">Register to Event</button>
+        </form>
+
+        <h3 class="eventCommentsHeader">Event Comments</h3>
+
+        <% eventComments.forEach((comment)=>{%>
+            <div class="commentDiv">
+                <div class="userProfileDiv">
+                    <img src="/images/userAvatar.png" alt="User Avatar">
+                    <p class="userName"><%= comment.commentAuthor %></p>
+                </div>
+                <div class="commentInfoDiv">
+                    <p class="commentHeader"><%= comment.commentHeader %></p>
+                    <p class="commentDescription"><%= comment.commentDescription %></p>
+                </div>
+            </div>
+        <%}); %>
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/icons/IstanbulExplorerIcon.jpg">
+    <link rel="stylesheet" href="/styles/eventsPage.css">
+    <title>Istanbul Explorer</title>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <a href="/">Home Page</a>
+            <a class="active">Events</a>
+            <a href="gallery">Gallery</a>
+            <a href="contact">Contact</a>
+        </nav>
+        <h3 class="mainHeader">Upcoming Events</h3>
+    
+        <% for (let i = 0; i < events.length; i += 2) { %>
+            <div class="eventsRow">
+                <% for (let j = i; j < i + 2 && j < events.length; j++) { %>
+                    <a class="eventArea" href="/events/<%= events[j].eventID %>">
+                        <h4 class="eventHeader"><%= events[j].eventHeader %></h4>
+                        <img src="/images/<%= events[j].eventImage %>" alt="<%= events[j].eventImage %>">
+                        <p class="eventDate"><%= events[j].eventDateTime %></p>
+                        <p class="eventLocation"><%= events[j].eventLocation %></p>
+                        <p class="eventDescription"><%= events[j].eventDescription%></p>
+                    </a>
+                <% } %>
+            </div>
+        <% } %>
+        
+        
+    </div>
+</body>
+</html>
